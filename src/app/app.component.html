@@ -1,0 +1,174 @@
+<div id="PageDiv" class="f-cf">
+	<div id="PageWrapper" class="f-cf">
+		<div id="HeadWrapper1" class="f-cf fbg">
+			<div id="Content3">
+				<div id="item14" class="f-cf">
+					<div id="item20"><p class="center f-fp f-lp">
+						<span class="style167"><span class="bodysmall"><span class="style15"><span class="lighten"><span class="style247"><span class="bodysmall"><span class="lighten">Петр Сергеевич Бесстужев</span></span></span></span></span></span></span>
+					</p>
+					</div>
+					<div id="item23"><p class="center f-fp f-lp">
+						<span class="style167"><span class="bodysmall"><span class="lighten"><span class="style178"><span class="lighten"><span class="lighten"><span class="style167"><span class="bodysmall"><span class="lighten"><span class="style178"><span class="lighten"><span class="style361">Баланс:</span><span class="style398"> 256 000 руб </span><span class="style361">•</span><span class="style398"> </span></span></span></span></span></span><span class="style389"><a href="account-additional-finance.html" class="item23">Пополнить</a> </span><span class="style347">&gt;</span></span></span></span></span></span></span>
+					</p>
+					</div>
+					<div id="item24"><p class="center f-fp f-lp">
+						<span class="style167"><span class="bodysmall"><span class="lighten"><span class="style178"><span class="lighten"><a href="account-faq.html" class="item24">Помощь</a></span></span></span></span></span>
+					</p>
+					</div>
+					<div id="item29"><p class="center f-fp f-lp">
+						<span class="style167"><span class="bodysmall"><span class="lighten"><span class="style178"><span class="lighten"><a href="account-login.html" class="item29">Выход</a></span></span></span></span></span>
+					</p>
+					</div>
+				</div>
+			</div>
+			<div id="item33" class="f-cf"></div>
+		</div>
+		<div id="BodyWrapper6" class="f-cf">
+			<div id="Content1">
+				<div id="item6" class="f-cf"><p class="center f-fp f-lp">
+					<span class="Footer"><span class="Menu"><span class="style60"><span class="bodysmall"><span class="style21">QBF &gt; ЛИЧНЫЙ КАБИНЕТ > <span class="style11">{{ currentTab.title.toUpperCase() }}</span></span></span></span></span></span>
+				</p>
+				</div>
+			</div>
+		</div>
+		<div id="BodyWrapper4" class="f-cf">
+			<div id="item22" class="f-cf">
+				<div id="ContentWrapper1">
+					<div id="Content2" class="f-cf">
+						<div id="item25" class="f-cf">
+							<a href="#" style="text-decoration: none" id="{{ currentTab === tab ? 'item26' : tab.class }}" *ngFor="let tab of tabs; let i = index;" routerLink="/{{tab.code}}">
+								<div class="center f-fp">
+									<div class="style123">
+										<div class="item26">
+											<span class="style206">
+												<img id="calculatoricon214x2" src="{{ tab.picture }}" alt="calculatoricon214x2" />
+											</span>
+										</div>
+									</div>
+								</div>
+								<p class="center f-lp"><span class="style406">{{ tab.title.toUpperCase() }}</span></p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="BodyWrapper2" class="f-cf">
+			<div id="item39" class="f-cf">
+				<div id="item54">
+					<app-main [user]="user" *ngIf="currentTab.code === 'review'"></app-main>
+					<app-services *ngIf="currentTab.code === 'service'"></app-services>
+					<app-bag *ngIf="currentTab.code === 'bag'"></app-bag>
+					<app-functions *ngIf="currentTab.code === 'functions'"></app-functions>
+					<app-profile (onUserUpdate)="updateUser($event)" [user]="user" *ngIf="currentTab.code === 'account'"></app-profile>
+				</div>
+				<div id="item2">
+					<div id="item4" class="f-cf">
+						<div id="item9"><p class="center f-fp">
+							<span class="style397"><span class="bodysmall"><img id="calculatoricon214x7" src="http://www.55n-37e.com/Resources/calculatoricon214-88.png" alt="calculatoricon214x7" /></span></span>
+						</p>
+							<p class="center">
+								<span class="style207"><span class="bodysmall"><span class="style15"><span class="bodysmall"><strong>Ваш финансовый советник</strong></span></span></span></span>
+							</p>
+							<p class="center">
+								<span class="style207"><span class="bodysmall"><span class="style15"><span class="bodysmall">тел: +7(495) 000-00-00</span></span></span></span>
+							</p>
+							<p class="center">
+								<span class="style207"><span class="bodysmall"><span class="style15"><span class="bodysmall">e-mail: &#102;&#97;&#64;&#113;&#98;&#102;&#105;&#110;&#46;&#114;&#117;</span></span></span></span>
+							</p>
+							<div id="item10" class="f-cf"><p class="center f-fp f-lp">
+								<span class="style397"><span class="bodysmall"><span class="style178"><a href="account-ask-question.html" class="item9;item1">Задать вопрос</a> <span class="lighten"><span class="style15">&gt;</span></span></span></span></span>
+							</p>
+							</div>
+							<div id="item8" class="f-cf"><p class="center f-fp f-lp">
+								<span class="style397"><span class="bodysmall"><span class="style178"><a href="account-make-appointment.html" class="item9;item8">Назначить встречу</a> <span class="lighten"><span class="style15">&gt;</span></span></span></span></span>
+							</p>
+							</div>
+						</div>
+					</div>
+					<div id="item15" class="f-cf">
+						<div id="item16"><p class="center f-fp">
+							<span class="style397"><span class="bodysmall"><img id="calculatoricon214x1" src="http://www.55n-37e.com/Resources/calculatoricon214-102.png" alt="calculatoricon214x1" /></span></span>
+						</p>
+							<p class="center">
+								<span class="style207"><span class="bodysmall"><span class="style15"><span class="bodysmall"><strong>Тех. поддержка Аккаунта</strong></span></span></span></span>
+							</p>
+							<p class="center">
+								<span class="style207"><span class="bodysmall"><span class="style15"><span class="bodysmall">тел: +7(495) 111-11-11</span></span></span></span>
+							</p>
+							<p class="center">
+								<span class="style207"><span class="bodysmall"><span class="style15"><span class="bodysmall">e-mail: &#105;&#116;&#64;&#113;&#98;&#102;&#105;&#110;&#46;&#114;&#117;</span></span></span></span>
+							</p>
+							<div id="item17" class="f-cf"><p class="center f-fp f-lp">
+								<span class="style397"><span class="bodysmall"><span class="style178"><a href="account-technical-support.html" class="item16;item17">Задать вопрос</a> <span class="lighten"><span class="style15">&gt;</span></span></span></span></span>
+							</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="BodyWrapper5" class="f-cf">
+			<div id="Body5" class="f-cf">
+				<div id="ContentWrapper5">
+					<div id="Content6" class="f-cf"><p class="style12 f-fp f-lp">
+						<a href="#top"><img id="calculatoricon214x9" src="http://www.55n-37e.com/Resources/calculatoricon214.png" alt="calculatoricon214x9" /></a>
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="FooterWrapper2" class="f-cf">
+			<div id="FooterWrapper2_m">
+				<div id="Footer1" class="f-cf"><p class="center f-fp">
+					<span class="Footer"><span class="Menu"><span class="style55">КОМПАНИЯ</span><span class="style24"> <span class="lighten">•</span> <span class="style15">УСЛУГИ</span> <span class="lighten">•</span> <span class="style15">АНАЛИТИКА</span> <span class="lighten">•</span> <span class="style15">НОВОСТИ</span> <span class="lighten">•︎</span> <span class="style15">КАРЬЕРА</span> <span class="lighten">•︎</span> <span class="style15">КОНТАКТЫ <span class="Footer"><span class="Menu"><span class="style24"><span class="lighten">•︎ <span class="style11">КАБИНЕТ</span></span></span></span></span></span></span></span></span>
+				</p>
+					<p class="center f-lp">
+						<span class="Footer"><span class="Menu"><span class="style60"><a href="index.html" class="Footer1">QBF</a> &gt; <span class="style11">ЛИЧНЫЙ КАБИНЕТ</span></span></span></span>
+					</p>
+				</div>
+				<div id="Footer-menu-2" class="f-cf">
+					<div id="Footer3"><p class="style48">
+						<span class="Footer"><span class="style144"><span class="Footer"><span class="style144"><span class="style15">уведомления</span> </span><span class="style111">| </span></span><span class="style15">конфиденциальность</span> <span class="style147">| </span><span class="style15">раскрытие информации</span></span></span>
+					</p>
+					</div>
+					<div id="Footer5"><p class="style127 f-fp f-lp">
+						<span class="Footer"><span class="style424">© QBF - 2016</span></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header id="css-menu-box">
+		<nav id="css-menu"><input type="checkbox" id="fwNav1-toggle" />
+			<label for="fwNav1-toggle" class="fwNav1-toggle-label"></label>
+			<div class="fwNavContainer1">
+				<label for="fwNav1-toggle" class="fwNav1-toggle-label fwNav1-toggle-close"></label>
+				<ul class="center f-fp f-lp" id="fwNav1">
+					<li class="fwFirstChild fwNavItem">
+						<a href="#nil" style="cursor:default"><span class="style55">КОМПАНИЯ</span></a></li>
+					<li class="fwNavItem"><a href="#nil" style="cursor:default"><span class="style55">УСЛУГИ</span></a>
+					</li>
+					<li class="fwNavItem">
+						<a href="#nil" style="cursor:default"><span class="style55">АНАЛИТИКА</span></a></li>
+					<li class="fwNavItem"><a href="#nil" style="cursor:default"><span class="style55">НОВОСТИ</span></a>
+					</li>
+					<li class="fwNavItem"><a href="#nil" style="cursor:default"><span class="style55">КАРЬЕРА</span></a>
+					</li>
+					<li class="fwNavItem">
+						<a href="#nil" style="cursor:default"><span class="style2"><span class="style15">КОНТАКТЫ</span></span></a>
+					</li>
+					<li class="fwNavItem"><a href="#nil" style="cursor:default"><span class="style72">КАБИНЕТ</span></a>
+					</li>
+					<li class="fwNavItem"><a href="#nil" style="cursor:default"><span class="style55">|</span></a></li>
+					<li class="fwLastChild fwNavItem">
+						<a href="#nil" style="cursor:default"><span class="style55">РУС / ENG</span></a></li>
+				</ul>
+			</div>
+		</nav>
+		<div id="QBFlogositev1"></div>
+	</header>
+	<div id="item1">
+		<a id="top"><img src="http://www.55n-37e.com/Resources/index3.gif" width="33" height="15" alt="item1" style="float:left" /></a>
+	</div>
+</div>
